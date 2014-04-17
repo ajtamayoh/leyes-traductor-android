@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+     
+        <title>Portal de leyes del traductor</title>
+        
+    </head>
+    <body>
+		
+		<div data-role="page">
+		
+			<div class="app">
+				
+					<h1>Portal de leyes del traductor</h1>
+				
+				
+				<!-- Código agregado por Antonio, tomado de la app web en producción -->
+				
+				
+				<div data-role="content">
+					
+					<div data-role="main" class="ui-content">
+				
+						<div id="container">
+								
+							<div data-role="header">
+								<div id="tituloForm">Consultar la normatividad por:</div>	
+							</div>
+		
+							<form id="form">
+							  <fieldset class="ui-field-contain">
+								<select name="lista" id="lista" class="listas">
+									<option id="todas" value="leyes">Todas</option>
+									<option id="stipo" value="tipo">Tipo</option>
+									<option id="sanio" value="anio">A&ntilde;o</option>
+									<option id="skeyword" value="keyword">Palabra clave</option>
+								</select>
+							  </fieldset>
+							  <br>
+
+								<div id="tipo" style="display: none">
+								
+								<select id="listaTipo" class="listas" size="5">
+									<option id="Acuerdo" value="Acuerdo">Acuerdo</option>
+									<option id="Circular" value="Circular">Circular</option>
+									<option id="Concept" value="Concepto">Concepto</option>
+									<option id="Consti" value="ConstituciÃ³n">Constituci&oacute;n</option>
+									<option id="Decision" value="DecisiÃ³n">Decisi&oacuten</option>
+									<option id="Decreto" value="Decreto">Decreto</option>
+									<option id="Decreto-Ley" value="Decreto-Ley">Decreto-Ley</option>
+									<option id="Ley" value="Ley">Ley</option>
+									<option id="Resol" value="ResoluciÃ³n">Resoluci&oacute;n</option>
+									<option id="Sentencia" value="Sentencia">Sentencia</option>
+								</select>
+
+								
+									</div>
+
+								<div id="area" style="display: none">
+
+								<input id="area1" type="radio" name="rad2" value="dip"> Derecho internacional p&uacute;blico</input>
+									<input id="area2" type="radio" name="rad2" value=""> Derecho tributario</input>
+
+								</div>
+
+
+								<div id="anio" style="display: none">
+								<select id="listaAnios" class="listas" size="5">
+									<option>2014</option>
+									<option>2013</option>
+									<option>2012</option>
+									<option>2011</option>
+									<option>2010</option>	
+									<option>2009</option>
+									<option>2008</option>
+									<option>2007</option>
+									<option>2006</option>
+									<option>2005</option>
+									<option>2004</option>
+									<option>2003</option>
+									<option>2002</option>
+									<option>2001</option>
+									<option>2000</option>
+									<option>1999</option>
+									<option>1998</option>
+									<option>1997</option>
+									<option>1996</option>
+									<option>1995</option>
+									<option>1994</option>
+									<option>1993</option>
+									<option>1992</option>
+									<option>1991</option>
+									<option>1989</option>
+									<option>1988</option>
+									<option>1987</option>
+									<option>1986</option>
+									<option>1985</option>
+									<option>1984</option>
+									<option>1983</option>
+									<option>1982</option>
+									<option>1981</option>
+									<option>1980</option>
+									<option>1979</option>
+									<option>1978</option>
+									<option>1977</option>
+									<option>1976</option>
+									<option>1975</option>
+									<option>1974</option>
+									<option>1973</option>
+									<option>1972</option>
+									<option>1971</option>
+									<option>1970</option>
+									<option>1969</option>
+									<option>1968</option>
+									<option>1967</option>
+									<option>1966</option>
+									<option>1965</option>
+									<option>1964</option>
+									<option>1963</option>
+									<option>1962</option>
+									<option>1961</option>
+									<option>1960</option>
+									<option>1959</option>
+									<option>1958</option>
+									<option>1957</option>
+									<option>1956</option>
+									<option>1955</option>
+									<option>1954</option>
+									<option>1953</option>
+									<option>1952</option>
+									<option>1951</option>
+									<option>1950</option>
+								</select>	
+								</div>
+
+
+								<div id="keyword" style="display: none">
+
+								<input id="pclave" type="text" name="txt1"></input>
+
+								</div>
+
+								<br><button id="buscar" class="botones">Buscar</button>
+							 
+							
+							</div>
+							
+
+							<br>
+							<div class="leftArea">
+								<ul id="leyes"></ul>
+							</div>
+
+						
+						</div>
+					
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			
+		</div>	
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+
+
